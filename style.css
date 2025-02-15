@@ -1,0 +1,182 @@
+@font-face {
+  font-family: "Satoshi";
+  src: url("./assets/satoshi-webfont/Satoshi-Light.woff");
+}
+@font-face {
+  font-family: "Gambetta";
+  src: url("./assets/Gambetta_Complete/Fonts/WEB/fonts/Gambetta-LightItalic.woff");
+}
+@font-face {
+  font-family: "Chillax";
+  src: url("./assets/chillax-webfont/Chillax-Regular.woff");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: clamp(16px, 1vw, 22px);
+}
+
+body {
+  background-color: #0e0e0e;
+  font-family: "Chillax";
+  color: #dac5a7;
+}
+
+main {
+  width: 100%;
+}
+
+#page1 {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  padding: 3rem 2rem 0 2rem;
+}
+#page1 img {
+  width: 68%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  margin-left: 50%;
+  transform: translateX(-48%);
+}
+#page1 h1 {
+  font-size: 4.1rem;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+}
+#page1 h1 span {
+  font-family: "Gambetta";
+  font-weight: 500;
+}
+#page1 p {
+  text-align: center;
+  font-weight: 100;
+  line-height: 1.5;
+  font-size: 1.15rem;
+  margin: 1rem 0;
+  opacity: 0.85;
+}
+#page1 p br {
+  display: none;
+}
+
+#page2 {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+#page2 .page2-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#page2 .page2-header #arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #34312c;
+  border-radius: 50px;
+  background-color: rgba(35, 33, 30, 0.4509803922);
+}
+#page2 .page2-header #arrow-container i {
+  color: rgba(218, 197, 167, 0.4666666667);
+}
+#page2 .page2-header h4 {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-weight: 800;
+}
+#page2 .marquee-container {
+  overflow: hidden;
+  display: flex;
+  padding: 2rem 0;
+  align-items: center;
+  position: relative;
+}
+#page2 .marquee-container::before {
+  content: "";
+  position: Absolute;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, transparent, #0e0e0e);
+  height: 100%;
+  width: 40%;
+  z-index: 2;
+}
+#page2 .marquee-container::after {
+  content: "";
+  position: Absolute;
+  top: 0;
+  right: 0;
+  background: linear-gradient(to right, transparent, #0e0e0e);
+  height: 100%;
+  width: 40%;
+}
+#page2 .marquee-container .marquee-item-container {
+  display: flex;
+  align-items: center;
+  animation: marquee 15s linear infinite;
+}
+#page2 .marquee-container .marquee-item-container h4 {
+  padding: 1rem;
+  font-size: 1.3rem;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@media (min-width: 1024px) {
+  #page1 img {
+    width: 60%;
+  }
+  #page1 h1 {
+    font-size: 7rem;
+  }
+  #page1 p {
+    font-size: 1.3rem;
+  }
+  #page1 p br {
+    display: initial;
+  }
+  #page2 .page2-header #arrow-container i {
+    font-size: 0.7rem;
+  }
+  #page2 .page2-header h4 {
+    font-size: 0.7rem;
+  }
+  #page2 .marquee-container {
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%;
+    padding: 2rem;
+  }
+  #page2 .marquee-container .marquee-item-container h4 {
+    padding: 2rem;
+  }
+}/*# sourceMappingURL=style.css.map */
