@@ -18,12 +18,12 @@
 
 html,
 body {
-  height: 100%;
+  min-height: 100%;
   width: 100%;
 }
 
 html {
-  font-size: clamp(16px, 1vw, 22px);
+  font-size: clamp(16px, 1vw, 24px);
 }
 
 body {
@@ -33,6 +33,7 @@ body {
 }
 
 main {
+  height: 100%;
   width: 100%;
 }
 
@@ -44,7 +45,7 @@ main {
   padding: 3rem 2rem 0 2rem;
 }
 #page1 img {
-  width: 68%;
+  width: 75%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -53,7 +54,7 @@ main {
   transform: translateX(-48%);
 }
 #page1 h1 {
-  font-size: 4.1rem;
+  font-size: 4rem;
   line-height: 1.5;
   text-align: center;
   font-family: "Satoshi";
@@ -68,12 +69,26 @@ main {
   text-align: center;
   font-weight: 100;
   line-height: 1.5;
-  font-size: 1.15rem;
+  font-size: 1.03rem;
   margin: 1rem 0;
   opacity: 0.85;
 }
 #page1 p br {
   display: none;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.8rem;
+  border: 1px solid #34312c;
+  border-radius: 50px;
+  background-color: rgba(35, 33, 30, 0.4509803922);
+}
+.arrow-container i {
+  color: #dac5a7;
+  font-size: 0.75rem;
 }
 
 #page2 {
@@ -86,21 +101,9 @@ main {
   align-items: center;
   gap: 1rem;
 }
-#page2 .page2-header #arrow-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0.8rem;
-  border: 1px solid #34312c;
-  border-radius: 50px;
-  background-color: rgba(35, 33, 30, 0.4509803922);
-}
-#page2 .page2-header #arrow-container i {
-  color: rgba(218, 197, 167, 0.4666666667);
-}
 #page2 .page2-header h4 {
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   letter-spacing: 2px;
   font-family: "Satoshi";
   font-weight: 500;
@@ -121,7 +124,7 @@ main {
   left: 0;
   background: linear-gradient(to left, transparent, #0e0e0e);
   height: 100%;
-  width: 40%;
+  width: 30%;
   z-index: 2;
 }
 #page2 .marquee-container::after {
@@ -131,7 +134,7 @@ main {
   right: 0;
   background: linear-gradient(to right, transparent, #0e0e0e);
   height: 100%;
-  width: 40%;
+  width: 30%;
 }
 #page2 .marquee-container .marquee-item-container {
   display: flex;
@@ -142,6 +145,58 @@ main {
   padding: 1rem;
   font-size: 1.3rem;
 }
+#page2 .card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#page2 .card-container .card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #343230;
+  padding: 1.8rem;
+  background-color: #181716;
+  gap: 0.5rem;
+  color: rgba(218, 197, 167, 0.8823529412);
+}
+#page2 .card-container .card h5 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  font-weight: 100;
+  color: rgba(218, 197, 167, 0.6156862745);
+}
+#page2 .card-container .card h4 {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+#page2 .card-container .card p {
+  font-size: 0.85rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+#page2 .card-container .card .about {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+#page2 .card-container .card .arrow-container {
+  padding: 0.3rem;
+}
+#page2 .card-container .card .arrow-container i {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+#page2 .card-container .card h6 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
 
 @keyframes marquee {
   from {
@@ -151,7 +206,7 @@ main {
     transform: translateX(-100%);
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   #page1 img {
     width: 60%;
   }
@@ -178,5 +233,25 @@ main {
   }
   #page2 .marquee-container .marquee-item-container h4 {
     padding: 2rem;
+  }
+  #page2 .card-container {
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  #page2 .card-container .card {
+    padding: 3.15rem;
+  }
+  #page2 .card-container .card h4 {
+    font-size: 1.5rem;
+  }
+  #page2 .card-container .card p {
+    font-size: 1rem;
+  }
+  #page2 .card-container .card h6 {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
   }
 }/*# sourceMappingURL=style.css.map */
