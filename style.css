@@ -30,11 +30,15 @@ body {
   background-color: #0e0e0e;
   font-family: "Chillax";
   color: #dac5a7;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 main {
   height: 100%;
   width: 100%;
+  max-width: 1400px;
 }
 
 #page1 {
@@ -42,16 +46,17 @@ main {
   flex-direction: column;
   width: 100%;
   align-items: center;
-  padding: 3rem 2rem 0 2rem;
+  padding: 3rem 1.5rem 0 1.5rem;
 }
 #page1 img {
-  width: 75%;
+  width: 70%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  margin-left: 50%;
-  transform: translateX(-48%);
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 #page1 h1 {
   font-size: 4rem;
@@ -69,7 +74,7 @@ main {
   text-align: center;
   font-weight: 100;
   line-height: 1.5;
-  font-size: 1.03rem;
+  font-size: 1.1rem;
   margin: 1rem 0;
   opacity: 0.85;
 }
@@ -85,15 +90,21 @@ main {
   border: 1px solid #34312c;
   border-radius: 50px;
   background-color: rgba(35, 33, 30, 0.4509803922);
+  transition: all 0.3s ease;
 }
 .arrow-container i {
-  color: #dac5a7;
-  font-size: 0.75rem;
+  color: rgba(218, 197, 167, 0.8156862745);
+  font-size: 0.85rem;
+}
+
+.arrow-container:hover {
+  border-color: #dac5a7;
+  background-color: #2c2925;
 }
 
 #page2 {
   width: 100%;
-  padding: 1rem 2rem;
+  padding: 3rem 1.5rem;
 }
 #page2 .page2-header {
   display: flex;
@@ -118,7 +129,7 @@ main {
   position: relative;
 }
 #page2 .marquee-container::before {
-  content: "";
+  content: " ";
   position: Absolute;
   top: 0;
   left: 0;
@@ -128,7 +139,7 @@ main {
   z-index: 2;
 }
 #page2 .marquee-container::after {
-  content: "";
+  content: " ";
   position: Absolute;
   top: 0;
   right: 0;
@@ -190,12 +201,62 @@ main {
 #page2 .card-container .card .arrow-container i {
   font-size: 1.2rem;
   font-weight: 100;
+  transition: all 0.3s ease;
+}
+#page2 .card-container .card .arrow-container:hover i {
+  rotate: 45deg;
 }
 #page2 .card-container .card h6 {
   font-size: 0.75rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
+}
+
+#page3 {
+  padding: 3rem 2rem;
+}
+#page3 .work-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+#page3 .work-header h4 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-size: 2rem;
+}
+#page3 .work-header .sub-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+#page3 .work-header .sub-header h5 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+#page3 .work-header .sub-header .arrow-container {
+  padding: 0.5rem;
+}
+#page3 .work-header .sub-header .arrow-container i {
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+#page3 .work-header .sub-header .arrow-container:hover i {
+  rotate: 45deg;
+}
+#page3 .works-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 @keyframes marquee {
@@ -211,13 +272,11 @@ main {
     width: 60%;
   }
   #page1 h1 {
-    font-size: 7rem;
+    font-size: 8rem;
   }
   #page1 p {
-    font-size: 1.3rem;
-  }
-  #page1 p br {
-    display: initial;
+    font-size: 1.4rem;
+    width: 50%;
   }
   #page2 .page2-header #arrow-container i {
     font-size: 0.7rem;
@@ -228,7 +287,7 @@ main {
   #page2 .marquee-container {
     left: 50%;
     transform: translateX(-50%);
-    width: 40%;
+    width: 60%;
     padding: 2rem;
   }
   #page2 .marquee-container .marquee-item-container h4 {
@@ -240,7 +299,7 @@ main {
     justify-content: center;
   }
   #page2 .card-container .card {
-    padding: 3.15rem;
+    padding: 2rem 3rem;
   }
   #page2 .card-container .card h4 {
     font-size: 1.5rem;
@@ -254,4 +313,4 @@ main {
     letter-spacing: 1px;
     font-weight: 600;
   }
-}/*# sourceMappingURL=style.css.map */
+}
