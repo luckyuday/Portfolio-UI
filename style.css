@@ -266,6 +266,7 @@ main {
   gap: 1rem;
 }
 #page3 .works-container .work {
+  position: relative;
   width: 100%;
   aspect-ratio: 4/3;
   background-position: center;
@@ -301,6 +302,27 @@ main {
   font-size: 0.9rem;
   text-transform: uppercase;
 }
+#page3 .works-container .work .arrow-container {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0.3rem;
+}
+#page3 .works-container .work .arrow-container i {
+  font-size: 1.2rem;
+  font-weight: 100;
+  transition: all 0.3s ease;
+  rotate: 45deg;
+}
+#page3 .works-container .work:hover .arrow-container {
+  opacity: 1;
+}
+#page3 .works-container .work:hover .arrow-container i {
+  rotate: 0deg;
+}
 #page3 .works-container #work1 {
   background-image: url("./assets/work1.jpg");
 }
@@ -312,6 +334,37 @@ main {
 }
 #page3 .works-container #work4 {
   background-image: url("./assets/work4.jpg");
+}
+
+#page4 {
+  width: 100%;
+  position: relative;
+}
+#page4 .header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#page4 .header h5 {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+#page4 .header h3 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-size: 3.6rem;
+  text-align: center;
+}
+#page4 .header h3 span {
+  font-family: "Gambetta";
+  font-weight: 500;
+}
+#page4 .header p {
+  text-align: center;
+  font-size: 1.1rem;
 }
 
 @keyframes marquee {
@@ -373,7 +426,6 @@ main {
   }
   #page3 {
     padding-top: 8rem;
-    gap: 2rem;
   }
   #page3 .work-header {
     flex-direction: row;
@@ -390,50 +442,8 @@ main {
   }
   #page3 .works-container .work {
     width: calc(50% - 1rem);
-    aspect-ratio: 4/3;
-    background-position: center;
-    background-size: cover;
-    border: 0.1px solid rgba(91, 87, 71, 0.4509803922);
-    border-radius: 0.2rem;
-    display: flex;
-    align-items: flex-end;
-    padding: 0 1rem 1rem 1rem;
   }
-  #page3 .works-container .work .work-content {
-    width: 100%;
-    border: 1px solid #5b5747;
-    border-radius: 0.2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0.9rem;
-    background-color: rgba(72, 66, 56, 0.231372549);
-    -webkit-backdrop-filter: blur(20px);
-            backdrop-filter: blur(20px);
-  }
-  #page3 .works-container .work .work-content h3 {
-    font-family: "Satoshi";
-    font-weight: 500;
-    line-height: 1;
-    font-size: 1.3rem;
-  }
-  #page3 .works-container .work .work-content h4 {
-    font-family: "Satoshi";
-    font-weight: 500;
-    line-height: 1;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-  }
-  #page3 .works-container #work1 {
-    background-image: url("./assets/work1.jpg");
-  }
-  #page3 .works-container #work2 {
-    background-image: url("./assets/work2.jpg");
-  }
-  #page3 .works-container #work3 {
-    background-image: url("./assets/work3.jpg");
-  }
-  #page3 .works-container #work4 {
-    background-image: url("./assets/work4.jpg");
+  #page3 .works-container .work .arrow-container {
+    display: initial;
   }
 }
