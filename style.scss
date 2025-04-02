@@ -664,7 +664,6 @@ main {
       }
     }
     .page4-content {
-      gap: 0.5rem;
       grid-template-areas:
         ". a ."
         ". b c"
@@ -699,19 +698,19 @@ main {
         ". . p";
 
       .number {
-        padding: 0.5rem 0.6rem;
-        font-size: 0.8rem;
+        padding: 0.6rem 0.7rem;
+        font-size: 0.85rem;
         margin: initial;
       }
-      #content1 {
-        margin-top: 1rem;
-      }
+
       .content {
-        gap: 2rem;
+        gap: initial;
         margin-bottom: 0;
+
         padding: 2rem;
         .time {
-          padding: 0.4rem;
+          align-self: flex-end;
+          padding: 0.2rem;
           h5 {
             font-size: 0.8rem;
           }
@@ -720,24 +719,29 @@ main {
           gap: 1rem;
           .heading {
             h5 {
-              font-size: 0.8rem;
-              word-spacing: 0.2rem;
+              font-size: 0.9rem;
             }
             h4 {
-              font-size: 1.3rem;
+              font-size: 1.6rem;
             }
           }
           p {
-            font-size: 0.9rem;
+            font-size: 1rem;
           }
         }
         ul {
-          padding-left: 1rem;
-          gap: 0.5rem;
+          margin-top: 2.5rem;
+          gap: 0.8rem;
           li {
-            font-size: 0.9rem;
+            font-size: 1rem;
           }
         }
+      }
+      .content:nth-child(2n + 1) {
+        margin-right: 3.5rem;
+      }
+      .content:nth-child(2n) {
+        margin-left: 3.5rem;
       }
     }
   }

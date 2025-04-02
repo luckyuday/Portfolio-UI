@@ -600,24 +600,21 @@ main {
     width: 85%;
   }
   #page4 .page4-content {
-    gap: 0.5rem;
     grid-template-areas: ". a ." ". b c" ". b c" ". b c" ". d c" ". e c" ". e c" "g e ." "g e ." "g e ." "g f ." "g h ." "g h ." "g h ." ". h j" ". h j" ". h j" ". i j" ". k j" ". k j" ". k j" "m k ." "m k ." "m k ." "m l ." "m n ." "m n ." "m n ." ". n p" ". o p" ". . p";
   }
   #page4 .page4-content .number {
-    padding: 0.5rem 0.6rem;
-    font-size: 0.8rem;
+    padding: 0.6rem 0.7rem;
+    font-size: 0.85rem;
     margin: initial;
   }
-  #page4 .page4-content #content1 {
-    margin-top: 1rem;
-  }
   #page4 .page4-content .content {
-    gap: 2rem;
+    gap: initial;
     margin-bottom: 0;
     padding: 2rem;
   }
   #page4 .page4-content .content .time {
-    padding: 0.4rem;
+    align-self: flex-end;
+    padding: 0.2rem;
   }
   #page4 .page4-content .content .time h5 {
     font-size: 0.8rem;
@@ -626,20 +623,25 @@ main {
     gap: 1rem;
   }
   #page4 .page4-content .content .main-content .heading h5 {
-    font-size: 0.8rem;
-    word-spacing: 0.2rem;
+    font-size: 0.9rem;
   }
   #page4 .page4-content .content .main-content .heading h4 {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
   }
   #page4 .page4-content .content .main-content p {
-    font-size: 0.9rem;
+    font-size: 1rem;
   }
   #page4 .page4-content .content ul {
-    padding-left: 1rem;
-    gap: 0.5rem;
+    margin-top: 2.5rem;
+    gap: 0.8rem;
   }
   #page4 .page4-content .content ul li {
-    font-size: 0.9rem;
+    font-size: 1rem;
+  }
+  #page4 .page4-content .content:nth-child(2n+1) {
+    margin-right: 3.5rem;
+  }
+  #page4 .page4-content .content:nth-child(2n) {
+    margin-left: 3.5rem;
   }
 }
