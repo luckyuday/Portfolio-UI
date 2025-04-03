@@ -35,6 +35,22 @@ body {
   align-items: center;
 }
 
+#cursor {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  border: 1px solid #dac5a7;
+  background-color: rgba(218, 197, 167, 0.2666666667);
+  position: fixed;
+  z-index: 9999;
+  transition: all 0.1s linear;
+  transform: translate(-50%, -50%);
+  display: none;
+  pointer-events: none;
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
+}
+
 main {
   height: 100%;
   width: 100%;
@@ -506,6 +522,9 @@ main {
   }
 }
 @media (min-width: 1280px) {
+  #cursor {
+    display: initial;
+  }
   main {
     padding: 0 3rem;
   }
