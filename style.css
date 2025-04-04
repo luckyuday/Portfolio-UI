@@ -23,7 +23,7 @@ body {
 }
 
 html {
-  font-size: clamp(16px, 1vw, 24px);
+  font-size: clamp(14px, 1vw, 20px);
 }
 
 body {
@@ -40,15 +40,14 @@ body {
   width: 2.5rem;
   border-radius: 50%;
   border: 1px solid #dac5a7;
-  background-color: rgba(218, 197, 167, 0.2666666667);
   position: fixed;
   z-index: 9999;
   transition: all 0.1s linear;
   transform: translate(-50%, -50%);
   display: none;
   pointer-events: none;
-  -webkit-backdrop-filter: blur(1px);
-          backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px) invert(100%);
+          backdrop-filter: blur(1px) invert(100%);
 }
 
 main {
@@ -374,7 +373,7 @@ main {
   font-family: "Satoshi";
   font-weight: 500;
   line-height: 1;
-  font-size: 3.6rem;
+  font-size: 4.5rem;
   text-align: center;
 }
 #page4 .header h3 span {
@@ -392,6 +391,9 @@ main {
   gap: 0.5rem;
   grid-template-areas: "a . . ." "b . . ." "b . . ." "b . . ." "b . . c" "d . . c" "e . . c" "e . . c" "e . . c" "e . . ." "e . . g" "f . . g" "h . . g" "h . . g" "h . . g" "h . . g" "h . . ." "h . . j" "i . . j" "k . . j" "k . . j" "k . . j" "k . . j" "k . . j" "k . . ." "k . . m" "l . . m" "n . . m" "n . . m" "n . . m" "n . . m" "n . . m" "n . . m" "n . . ." "n . . p" "o . . p" ". . . p" ". . . p" ". . . p" ". . . p" ". . . p" ". . . p" ". . . p";
 }
+#page4 .page4-content .arrow-container i {
+  font-size: 1rem;
+}
 #page4 .page4-content .line {
   justify-self: center;
   width: 2px;
@@ -401,11 +403,11 @@ main {
 #page4 .page4-content .number {
   justify-self: center;
   place-self: center;
-  padding: 0.5rem 0.6rem;
+  padding: 0.55rem 0.8rem;
   border: 1px solid rgba(218, 197, 167, 0.1764705882);
   background-color: #181716;
   border-radius: 50%;
-  font-size: 0.8rem;
+  font-size: 1rem;
   height: -moz-fit-content;
   height: fit-content;
   width: -moz-fit-content;
@@ -419,7 +421,7 @@ main {
   margin-bottom: 2rem;
   border: 1px solid rgba(218, 197, 167, 0.1764705882);
   background-color: #181716;
-  padding: 1.5rem;
+  padding: 2rem;
 }
 #page4 .page4-content .content .time {
   width: -moz-fit-content;
@@ -441,17 +443,18 @@ main {
 #page4 .page4-content .content .main-content .heading h5 {
   text-transform: uppercase;
   color: rgba(218, 197, 167, 0.431372549);
-  font-size: 0.8rem;
+  font-size: 0.95rem;
   word-spacing: 0.2rem;
 }
 #page4 .page4-content .content .main-content .heading h4 {
   text-transform: uppercase;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
   font-weight: 400;
   color: rgba(218, 197, 167, 0.7450980392);
 }
 #page4 .page4-content .content .main-content p {
-  font-size: 0.9rem;
+  font-size: 1.03rem;
   color: rgba(218, 197, 167, 0.8823529412);
 }
 #page4 .page4-content .content ul {
@@ -511,6 +514,22 @@ main {
 }
 #page4 .page4-content #content5 {
   grid-area: p;
+}
+
+#page5 {
+  width: 100%;
+}
+#page5 .heading {
+  font-size: 4rem;
+  font-weight: 400;
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  text-align: center;
+}
+#page5 .heading:nth-child(2) {
+  font-family: "Gambetta";
+  font-weight: 500;
 }
 
 @keyframes marquee {
