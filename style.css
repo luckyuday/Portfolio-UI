@@ -14,6 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 
 html,
@@ -36,18 +37,18 @@ body {
 }
 
 #cursor {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
-  border: 1px solid #dac5a7;
+  border: 2px solid rgba(218, 197, 167, 0.3137254902);
   position: fixed;
   z-index: 9999;
-  transition: all 0.1s linear;
+  transition: all 0.01s linear;
   transform: translate(-50%, -50%);
   display: none;
   pointer-events: none;
-  -webkit-backdrop-filter: blur(1px) invert(100%);
-          backdrop-filter: blur(1px) invert(100%);
+  -webkit-backdrop-filter: blur(1px);
+          backdrop-filter: blur(1px);
 }
 
 main {
@@ -443,7 +444,7 @@ main {
 #page4 .page4-content .content .main-content .heading h5 {
   text-transform: uppercase;
   color: rgba(218, 197, 167, 0.431372549);
-  font-size: 0.95rem;
+  font-size: 1rem;
   word-spacing: 0.2rem;
 }
 #page4 .page4-content .content .main-content .heading h4 {
@@ -465,7 +466,7 @@ main {
 }
 #page4 .page4-content .content ul li {
   color: rgba(218, 197, 167, 0.8823529412);
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 #page4 .page4-content .arrow-container {
   grid-area: a;
@@ -519,7 +520,13 @@ main {
 #page5 {
   width: 100%;
 }
-#page5 .heading {
+#page5 .heading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+#page5 .heading-container h2 {
   font-size: 4rem;
   font-weight: 400;
   font-family: "Satoshi";
@@ -527,9 +534,55 @@ main {
   line-height: 1;
   text-align: center;
 }
-#page5 .heading:nth-child(2) {
+#page5 .heading-container h2:nth-child(2) {
   font-family: "Gambetta";
   font-weight: 500;
+}
+#page5 .heading-container h3 {
+  color: rgba(198, 179, 152, 0.9607843137);
+  text-align: center;
+  font-weight: 400;
+}
+#page5 .card-container {
+  width: 100%;
+  display: flex;
+  margin-top: 3rem;
+  flex-direction: column;
+  color: #d7c3a5;
+}
+#page5 .card-container .card {
+  border: 1px solid #34312c;
+  background-color: #181716;
+  padding: 2.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#page5 .card-container .card .content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+#page5 .card-container .card .content h4 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-size: 1.5rem;
+  line-height: 1.2;
+}
+#page5 .card-container .card .content p {
+  font-size: 1rem;
+  color: rgba(198, 179, 152, 0.9607843137);
+}
+#page5 .card-container .card .profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+#page5 .card-container .card .profile .img-container img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @keyframes marquee {

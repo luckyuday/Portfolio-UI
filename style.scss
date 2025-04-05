@@ -28,6 +28,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  cursor: none;
 }
 html,
 body {
@@ -46,18 +47,19 @@ body {
   align-items: center;
 }
 #cursor {
-  height: 2.5rem;
-  width: 2.5rem;
+  height: 2rem;
+  width: 2rem;
   border-radius: 50%;
-  border: 1px solid #dac5a7;
+  border: 2px solid #dac5a750;
   position: fixed;
   z-index: 9999;
-  transition: all 0.1s linear;
+  transition: all 0.01s linear;
   transform: translate(-50%, -50%);
   display: none;
   pointer-events: none;
-  backdrop-filter: blur(1px) invert(100%);
+  backdrop-filter: blur(1px);
 }
+
 main {
   height: 100%;
   width: 100%;
@@ -439,7 +441,6 @@ main {
     }
     .line {
       justify-self: center;
-
       width: 2px;
       height: initial;
       background-color: #dac5a72d;
@@ -483,7 +484,7 @@ main {
           h5 {
             text-transform: uppercase;
             color: #dac5a76e;
-            font-size: 0.95rem;
+            font-size: 1rem;
             word-spacing: 0.2rem;
           }
           h4 {
@@ -506,7 +507,7 @@ main {
         gap: 0.5rem;
         li {
           color: #dac5a7e1;
-          font-size: 0.9rem;
+          font-size: 1rem;
         }
       }
     }
@@ -565,14 +566,65 @@ main {
 
 #page5 {
   width: 100%;
-  .heading {
-    font-size: 4rem;
-    font-weight: 400;
-    @include satoshi;
-    text-align: center;
+  .heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      @include satoshi;
+      text-align: center;
+    }
+    h2:nth-child(2) {
+      @include gambetta;
+    }
+    h3 {
+      color: #c6b398f5;
+      text-align: center;
+      font-weight: 400;
+    }
   }
-  .heading:nth-child(2) {
-    @include gambetta;
+  .card-container {
+    width: 100%;
+    display: flex;
+    margin-top: 3rem;
+    flex-direction: column;
+    color: #d7c3a5;
+    .card {
+      border: 1px solid #34312c;
+      background-color: #181716;
+      padding: 2.2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      .content {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        h4 {
+          @include satoshi;
+          font-size: 1.5rem;
+          line-height: 1.2;
+        }
+        p {
+          font-size: 1rem;
+          color: #c6b398f5;
+        }
+      }
+      .profile {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        .img-container {
+          img {
+            width: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
   }
 }
 
