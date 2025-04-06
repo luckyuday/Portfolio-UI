@@ -548,6 +548,7 @@ main {
   display: flex;
   margin-top: 3rem;
   flex-direction: column;
+  gap: 1rem;
   color: #d7c3a5;
 }
 #page5 .card-container .card {
@@ -579,10 +580,31 @@ main {
   gap: 1rem;
   align-items: center;
 }
+#page5 .card-container .card .profile .img-container {
+  width: 30%;
+}
 #page5 .card-container .card .profile .img-container img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 50%;
+}
+#page5 .card-container .card .profile .profile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  letter-spacing: 1px;
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+}
+#page5 .card-container .card .profile .profile-content h4 {
+  text-transform: uppercase;
+}
+#page5 .card-container .card .profile .profile-content h5 {
+  color: rgba(215, 195, 165, 0.5019607843);
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
 @keyframes marquee {

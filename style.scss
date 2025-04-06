@@ -591,6 +591,7 @@ main {
     display: flex;
     margin-top: 3rem;
     flex-direction: column;
+    gap: 1rem;
     color: #d7c3a5;
     .card {
       border: 1px solid #34312c;
@@ -618,9 +619,26 @@ main {
         gap: 1rem;
         align-items: center;
         .img-container {
+          width: 30%;
           img {
             width: 100%;
             object-fit: cover;
+            border-radius: 50%;
+          }
+        }
+        .profile-content {
+          display: flex;
+          flex-direction: column;
+          gap: 0.5rem;
+          letter-spacing: 1px;
+          @include satoshi;
+          h4 {
+            text-transform: uppercase;
+          }
+          h5 {
+            color: #d7c3a580;
+            font-size: 1rem;
+            line-height: 1.2;
           }
         }
       }
