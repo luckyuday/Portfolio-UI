@@ -655,6 +655,71 @@ main {
     }
   }
 }
+#page6 {
+  margin: 4rem 0;
+  padding: 0 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  #photo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    h2 {
+      @include satoshi;
+      font-size: 2rem;
+    }
+    img {
+      width: 80%;
+    }
+    h2:nth-child(3) {
+      display: none;
+    }
+  }
+  #content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    h2 {
+      @include satoshi;
+      font-size: 2.2rem;
+      text-align: center;
+      line-height: 1.1;
+      span {
+        @include gambetta;
+      }
+    }
+    #content-part-2 {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      p {
+        color: #c6b398ef;
+        font-size: 1.1rem;
+        text-align: center;
+        line-height: 1.6;
+      }
+      .social-media-container {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        .social-media {
+          padding: 0.5rem 0.6rem;
+          border-radius: 50%;
+          border: 1px solid #c6b39833;
+          background-color: #181716;
+          i {
+            font-size: 1.5rem;
+            color: #c6b398ef;
+          }
+        }
+      }
+    }
+  }
+}
 
 @keyframes marquee {
   from {
