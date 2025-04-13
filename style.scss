@@ -45,6 +45,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 #cursor {
   height: 2rem;
@@ -655,6 +656,7 @@ main {
     }
   }
 }
+
 #page6 {
   margin: 4rem 0;
   padding: 0 2rem;
@@ -670,6 +672,9 @@ main {
     h2 {
       @include satoshi;
       font-size: 2rem;
+      span {
+        @include gambetta;
+      }
     }
     img {
       width: 80%;
@@ -961,6 +966,52 @@ main {
               width: 4rem;
             }
           }
+        }
+      }
+    }
+  }
+
+  #page6 {
+    gap: 5rem;
+    #photo-container {
+      flex-direction: initial;
+      justify-content: center;
+      align-items: center;
+      gap: 4rem;
+      h2 {
+        text-align: initial;
+        font-size: 9rem;
+        white-space: nowrap;
+      }
+      img {
+        width: 35%;
+      }
+      h2:nth-child(3) {
+        display: initial;
+      }
+    }
+    #content {
+      flex-direction: row;
+      width: 100%;
+      gap: 1rem;
+      justify-content: space-between;
+      h2 {
+        font-size: 3rem;
+        text-align: initial;
+        span {
+          font-size: 3.3rem;
+        }
+      }
+      #content-part-2 {
+        width: 50%;
+
+        p {
+          font-size: 1.3rem;
+          text-align: initial;
+          line-height: 1.6;
+        }
+        .social-media-container {
+          justify-content: initial;
         }
       }
     }

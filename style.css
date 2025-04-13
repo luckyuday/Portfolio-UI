@@ -34,6 +34,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow-x: hidden;
 }
 
 #cursor {
@@ -637,6 +638,10 @@ main {
   line-height: 1;
   font-size: 2rem;
 }
+#page6 #photo-container h2 span {
+  font-family: "Gambetta";
+  font-weight: 500;
+}
 #page6 #photo-container img {
   width: 80%;
 }
@@ -870,5 +875,49 @@ main {
   }
   #page5 .card-containers .card-container .card .profile .img-container {
     width: 4rem;
+  }
+  #page6 {
+    gap: 5rem;
+  }
+  #page6 #photo-container {
+    flex-direction: initial;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+  #page6 #photo-container h2 {
+    text-align: initial;
+    font-size: 9rem;
+    white-space: nowrap;
+  }
+  #page6 #photo-container img {
+    width: 35%;
+  }
+  #page6 #photo-container h2:nth-child(3) {
+    display: initial;
+  }
+  #page6 #content {
+    flex-direction: row;
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  #page6 #content h2 {
+    font-size: 3rem;
+    text-align: initial;
+  }
+  #page6 #content h2 span {
+    font-size: 3.3rem;
+  }
+  #page6 #content #content-part-2 {
+    width: 50%;
+  }
+  #page6 #content #content-part-2 p {
+    font-size: 1.3rem;
+    text-align: initial;
+    line-height: 1.6;
+  }
+  #page6 #content #content-part-2 .social-media-container {
+    justify-content: initial;
   }
 }
