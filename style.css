@@ -600,10 +600,13 @@ main {
 }
 #page5 .card-container .card .profile .profile-content h4 {
   text-transform: uppercase;
+  line-height: 1.2;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
 }
 #page5 .card-container .card .profile .profile-content h5 {
   color: rgba(215, 195, 165, 0.5019607843);
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.2;
 }
 
