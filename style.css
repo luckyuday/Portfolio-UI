@@ -698,6 +698,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: #181716;
 }
 #page7 .marquee-container {
   overflow: hidden;
@@ -708,13 +709,66 @@ main {
   background-color: #22201f;
 }
 #page7 .marquee-container .marquee-item-container {
-  animation: marquee 50s linear infinite;
+  animation: marquee 40s linear infinite;
   display: flex;
   align-items: center;
 }
 #page7 .marquee-container .marquee-item-container h4 {
   white-space: nowrap;
   padding: 1rem;
+  text-transform: uppercase;
+}
+#page7 .footer-content {
+  width: 100%;
+  padding: 2rem 1.75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+#page7 .footer-content h5 {
+  text-transform: uppercase;
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+}
+#page7 .footer-content h2 {
+  font-family: "Satoshi";
+  font-weight: 500;
+  line-height: 1;
+  font-size: 5rem;
+  text-align: center;
+}
+#page7 .footer-content h2 span {
+  font-family: "Gambetta";
+  font-weight: 500;
+}
+#page7 .footer-content h4 {
+  font-weight: 100;
+  font-size: 1.25rem;
+  line-height: 1.3;
+  text-align: center;
+  color: rgba(218, 197, 167, 0.8274509804);
+}
+#page7 .footer-content button {
+  display: flex;
+  border-radius: 0.1rem;
+  outline: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.8rem 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  background-color: #dac5a7;
+}
+#page7 .footer-content button i {
+  font-size: 1.2rem;
 }
 
 @keyframes marquee {
@@ -943,5 +997,17 @@ main {
   }
   #page6 #content #content-part-2 .social-media-container {
     justify-content: initial;
+  }
+  #page7 .marquee-container .marquee-item-container {
+    animation: marquee 20s linear infinite;
+  }
+  #page7 .footer-content {
+    padding: 5rem 1.75rem;
+  }
+  #page7 .footer-content h2 {
+    font-size: 8rem;
+  }
+  #page7 .footer-content h4 {
+    width: 35%;
   }
 }

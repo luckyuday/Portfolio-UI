@@ -730,6 +730,7 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  background-color: #181716;
   .marquee-container {
     overflow: hidden;
     width: 100%;
@@ -739,13 +740,61 @@ main {
     background-color: #22201f;
 
     .marquee-item-container {
-      animation: marquee 50s linear infinite;
+      animation: marquee 40s linear infinite;
       display: flex;
       align-items: center;
 
       h4 {
         white-space: nowrap;
         padding: 1rem;
+        text-transform: uppercase;
+      }
+    }
+  }
+  .footer-content {
+    width: 100%;
+    padding: 2rem 1.75rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    h5 {
+      text-transform: uppercase;
+      font-size: 1rem;
+      text-align: center;
+      @include satoshi;
+    }
+    h2 {
+      @include satoshi;
+      font-size: 5rem;
+      text-align: center;
+      span {
+        @include gambetta;
+      }
+    }
+    h4 {
+      font-weight: 100;
+      font-size: 1.25rem;
+      line-height: 1.3;
+      text-align: center;
+      color: #dac5a7d3;
+    }
+    button {
+      display: flex;
+      border-radius: 0.1rem;
+      outline: none;
+      border: none;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-top: 1.5rem;
+      font-size: 0.8rem;
+      background-color: #dac5a7;
+      i {
+        font-size: 1.2rem;
       }
     }
   }
@@ -1037,6 +1086,23 @@ main {
         .social-media-container {
           justify-content: initial;
         }
+      }
+    }
+  }
+
+  #page7 {
+    .marquee-container {
+      .marquee-item-container {
+        animation: marquee 20s linear infinite;
+      }
+    }
+    .footer-content {
+      padding: 5rem 1.75rem;
+      h2 {
+        font-size: 8rem;
+      }
+      h4 {
+        width: 35%;
       }
     }
   }
