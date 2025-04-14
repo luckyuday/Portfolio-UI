@@ -693,6 +693,30 @@ main {
   color: rgba(198, 179, 152, 0.937254902);
 }
 
+#page7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+#page7 .marquee-container {
+  overflow: hidden;
+  width: 100%;
+  display: flex;
+  border-top: 1px solid #3d3833;
+  border-bottom: 1px solid #3d3833;
+  background-color: #22201f;
+}
+#page7 .marquee-container .marquee-item-container {
+  animation: marquee 50s linear infinite;
+  display: flex;
+  align-items: center;
+}
+#page7 .marquee-container .marquee-item-container h4 {
+  white-space: nowrap;
+  padding: 1rem;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(0);

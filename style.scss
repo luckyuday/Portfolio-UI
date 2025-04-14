@@ -725,7 +725,31 @@ main {
     }
   }
 }
+#page7 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  .marquee-container {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    border-top: 1px solid #3d3833;
+    border-bottom: 1px solid #3d3833;
+    background-color: #22201f;
 
+    .marquee-item-container {
+      animation: marquee 50s linear infinite;
+      display: flex;
+      align-items: center;
+
+      h4 {
+        white-space: nowrap;
+        padding: 1rem;
+      }
+    }
+  }
+}
 @keyframes marquee {
   from {
     transform: translateX(0);
